@@ -1,0 +1,14 @@
+from settings import *
+
+class Level:
+    def __init__(self, tmx_map):
+        self.SCREEN = pygame.display.get_surface()
+        self.setup(tmx_map)
+
+    def setup(self, tmx_map):
+        for x,y,surface in tmx_map.get_layer_by_name('Terrain').tiles():
+            print(x)
+            print(y)
+            print(surface)
+    def run(self):
+        self.SCREEN.fill("chocolate")
